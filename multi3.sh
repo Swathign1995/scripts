@@ -1,6 +1,10 @@
-for i in $(seq 10 -1 1)
+for j in $(seq $1 -1 1)
 do
-	res=`expr $1 \* $i`
-	echo " $1 * $i = $res "
+	for i in $(seq $2 -1 1)
+	do
+	res=`expr $j \* $i`
+	echo " $j * $i = $res "
+done
+echo -------------------------
 done
 
